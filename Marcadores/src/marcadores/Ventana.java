@@ -4,7 +4,7 @@ package marcadores;
 
 public class Ventana extends javax.swing.JFrame {
 
-    Coordenadas miCoordenadas = new Coordenadas(); 
+  
     
     public Ventana() {
         initComponents();
@@ -76,10 +76,16 @@ public class Ventana extends javax.swing.JFrame {
 
     private void insertarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_insertarMouseClicked
 
-
-
-
-
+        float latitud;
+        float longitud;
+        
+       latitud=Float.valueOf(lat.getText()); 
+       lat.setText(" ");
+       longitud=Float.valueOf(lon.getText());
+       lon.setText(" ");
+       
+       
+       
 
 
 
