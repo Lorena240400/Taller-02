@@ -14,6 +14,9 @@ public class Marcadores {
   
     public static void main(String[] args) {
   
+        Ventana miVentana= new Ventana();
+        miVentana.setVisible(true);
+        
         Connection conexion;
         String url="jdbc:mysql://localhost:3306/marcador";
         String usuario="root";
@@ -22,14 +25,14 @@ public class Marcadores {
         try {
             conexion=DriverManager.getConnection(url, usuario,clave);
             System.out.println("por fin");
-            String cadena= "INSERT INTO ejemplo (latitud,longitud) VALUES (4.2,8.1)";
+            String cadena= "INSERT INTO coordenadas (latitud,longitud) VALUES (4.2,8.1)";
             Statement sentencia;
             sentencia=conexion.createStatement();
             sentencia.execute(cadena);
             
         } catch (SQLException ex) {
             
-            System.out.println("no me conecte");
+            System.out.println(ex.getMessage());
         }
         
         
